@@ -9,9 +9,15 @@ import {RequestUserCrear} from "../model/RequestUserCrear";
   providedIn: 'root'
 })
 export class ApiService{
-  private urlproductos='http://localhost:8080/api/v1/productos';
+
+  //dev
+  /*private urlproductos='http://localhost:8080/api/v1/productos';
   private urlusuarios='http://localhost:8080/api/v1/usuarios';
-  private urlLogin='http://localhost:8080/api/v1/login'
+  private urlLogin='http://localhost:8080/api/v1/login'*/
+  //prd
+  private urlproductos='https://dc0c-15-228-205-48.ngrok-free.app/api/v1/productos';
+  private urlusuarios='https://dc0c-15-228-205-48.ngrok-free.app/api/v1/usuarios';
+  private urlLogin='https://dc0c-15-228-205-48.ngrok-free.app/api/v1/login'
 
 constructor( private http:HttpClient) {
 
