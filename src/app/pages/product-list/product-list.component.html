@@ -1,0 +1,106 @@
+<div class="main-container">
+  <div class="side">
+    <app-ususario-datos></app-ususario-datos>
+    <div class="modulos">
+
+    </div>
+  </div>
+  <div class="menu">
+    <div class="barra-superior">
+      <img src="assets/nazcalogo.png" alt="">
+    </div>
+    <div class="main-menu">
+      <div class="titulo">
+        <i class="far fa-list-alt"></i>
+        <span> Gestión de Productos</span>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Cantidad_Stock</th>
+              <th>Fabricante</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let datos of data | paginate: { itemsPerPage: 10, currentPage: page }">
+              <td ><img src="{{datos.imagenUrl}}" alt="" width="30px"></td>
+              <td>{{datos.nombre}}</td>
+              <td>{{datos.cantidadEnStock}}</td>
+              <td>{{datos.marca}}</td>
+              <td>S/. {{datos.precio}}</td>
+
+              <td>
+                <p-toast></p-toast>
+                <div class="acciones">
+                  <button (click)="verDetalles(datos.id)"><i class="fas fa-eye eye"></i></button>
+                  <button (click)="showDialog(datos)"><i class="fas fa-edit edit"></i></button>
+                  <button (click)="EliminarProducto(datos.id)"><i class="far fa-trash-alt trash"></i></button>
+                </div>
+              </td>
+            </tr>
+            <p-dialog header="Editar Usuario" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+
+              <div class="form">
+                <form (ngSubmit)="actualizarProducto()">
+                  <input type="text" (keyup)="busqueda(busquedaa.value)" #busquedaa>
+                  <div class="datos">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" [(ngModel)]="producto.nombre">
+                  </div>
+                  <div class="datos">
+                    <label for="categoria">Categoría:</label>
+                    <input type="text" id="categoria" name="categoria" [(ngModel)]="producto.categoria">
+                  </div>
+                  <div class="datos">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" name="marca" [(ngModel)]="producto.marca">
+                  </div>
+                  <div class="datos">
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" [(ngModel)]="producto.precio">
+                  </div>
+                  <div class="datos">
+                    <label for="cantidadEnStock">Cantidad en Stock:</label>
+                    <input type="number" id="cantidadEnStock" name="cantidadEnStock" [(ngModel)]="producto.cantidadEnStock">
+                  </div>
+                  <div class="datos">
+                    <label for="imagenUrl">URL de la Imagen:</label>
+                    <input type="text" id="imagenUrl" name="imagenUrl" [(ngModel)]="producto.imagenUrl">
+                  </div>
+                  <div class="datos">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" [(ngModel)]="producto.descripcion"></textarea>
+                  </div>
+
+                  <button class="btn">Guardar Producto</button>
+                </form>
+              </div>
+            </p-dialog>
+
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+    <div class="paginador">
+    <pagination-controls
+      (pageChange)="page=($event)"
+      (pageBoundsCorrection)="page=($event)"
+      previousLabel="Previous"
+      nextLabel="Next"
+      screenReaderPaginationLabel="Pagination"
+      screenReaderPageLabel="page"
+      screenReaderCurrentLabel="You're on page">
+    </pagination-controls>
+    </div>
+  </div>
+
+</div>
+
+

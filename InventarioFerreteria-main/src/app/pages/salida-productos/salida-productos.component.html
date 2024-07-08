@@ -1,0 +1,34 @@
+<div class="main-container">
+  <div class="side">
+    <div class="user">
+      <app-ususario-datos></app-ususario-datos>
+    </div>
+
+  </div>
+  <div class="menu">
+    <div class="barra-superior">
+      <img src="assets/nazcalogo.png" alt="">
+    </div>
+    <div class="main-menu">
+      <div class="titulo">
+        <i class="far fa-list-alt"></i>
+        <span> Gestión de Usuarios</span>
+      </div>
+      <div>
+        <label for="productos">Seleccione un producto:</label>
+        <select id="productos" [(ngModel)]="selectedProducto">
+          <option *ngFor="let producto of productos" [ngValue]="producto">{{ producto.nombre }}</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" [(ngModel)]="cantidad" />
+      </div>
+      <button (click)="realizarSalida()">Realizar Salida</button>
+
+    </div>
+  </div>
+</div>
+
+

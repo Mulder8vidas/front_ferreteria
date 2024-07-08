@@ -1,0 +1,76 @@
+.main-container{
+  width: 98.9vw;
+  height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+}
+.side{
+  width: 20%;
+  background: #172730;
+  height: 100vh;
+}
+.menu{
+  padding: 1em;
+  width: 80%;
+  height: 100vh;
+  background: #f0f1f3;
+}
+.barra-superior{
+  width: 100%;
+  height: 50px;
+  border-bottom: solid 2px #172730;
+}
+.barra-superior img{
+  width: 140px;
+}
+.main-menu{
+  padding: 1em;
+}
+.titulo{
+  font-size: 2em;
+  color: #555f67;
+
+}
+.titulo span{
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+
+}
+.titulomenu{
+  font-size: 1em;
+  font-weight: 400;
+  color: #555f67;
+}
+.modulos-menu{
+  padding: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+
+}
+.modulos-menu span{
+  font-size: 1.1em;
+}
+
+.modulo {
+  width: calc(25% );
+  height: 250px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #375A65;
+  border: solid 1px #375A65;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 1em;
+}
+.modulo:hover{
+  transition-duration: .5s;
+  background: #efefef;
+}
+
+.icono{
+  font-size: 10em;
+}

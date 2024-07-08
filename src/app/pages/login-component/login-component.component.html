@@ -1,0 +1,21 @@
+<div class="login-main">
+  <div class="login-container">
+    <img src="assets/nazcalogo.png" alt="logo-ferreteria" width="380">
+    <div class="login-box">
+      <span>Por favor Inicia Sesión </span>
+      <form [formGroup]="form" (ngSubmit)="Login()">
+      <div class="user format">
+      <input  formControlName="email" id="user" type="email" placeholder="Introduce tu usuario">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="password format">
+      <input formControlName="password" type="password" placeholder="introduce tu contraseña">
+        <i class="fas fa-unlock"></i>
+      </div>
+        <button class="btn">Ingresar</button>
+
+      </form>
+    </div>
+
+  </div>
+</div>

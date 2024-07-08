@@ -1,0 +1,59 @@
+<div class="main-container">
+  <div class="side">
+    <app-ususario-datos></app-ususario-datos>
+    <div class="modulos">
+
+    </div>
+  </div>
+  <div class="menu">
+    <div class="barra-superior">
+      <img src="assets/nazcalogo.png" alt="">
+    </div>
+    <div class="main-menu">
+      <div class="titulo">
+        <i class="fas fa-plus-circle icono"></i>
+        <span> Agregar Producto</span>
+      </div>
+      <div class="form">
+        <form (ngSubmit)="onSubmit()">
+          <p-toast></p-toast>
+
+          <div class="datos">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" [(ngModel)]="producto.nombre">
+          </div>
+          <div class="datos">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" [(ngModel)]="producto.categoria">
+          </div>
+          <div class="datos">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" [(ngModel)]="producto.marca">
+          </div>
+          <div class="datos">
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" [(ngModel)]="producto.precio">
+          </div>
+          <div class="datos">
+            <label for="cantidadEnStock">Cantidad en Stock:</label>
+            <input type="number" id="cantidadEnStock" name="cantidadEnStock" [(ngModel)]="producto.cantidadEnStock">
+          </div>
+          <div class="datos">
+            <label for="imagenUrl">URL de la Imagen:</label>
+            <input type="text" id="imagenUrl" name="imagenUrl" [(ngModel)]="producto.imagenUrl">
+          </div>
+          <div class="datos">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" [(ngModel)]="producto.descripcion"></textarea>
+          </div>
+
+          <button>Guardar Producto</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,63 @@
+.login-main{
+  background: #ecf0f5;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+
+}
+.login-box{
+  margin-top: 1em;
+  width: 100%;
+  border-top: 4px #244289 solid;
+  padding: .5em 0;
+  text-align: center;
+  justify-content: center;
+  background: #fff;
+
+
+}
+.format{
+  padding-right: 2%;
+  width: 90%;
+  margin-left: 4%;
+  margin-top: 1em;
+  border: solid 2px #3f3f3f;
+
+}
+form{
+  width: 100%;
+
+}
+span{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2em;
+  color: #3f3f3f;
+}
+input{
+  width: 90%;
+  padding: .8em;
+  border: none;
+  background: none;
+  outline: none;
+}
+.btn{
+  margin: 2em 0;
+  padding:1em 0;
+  width: 50%;
+  background: #ef6f0a;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover{
+  transition-duration: .3s;
+  background: #d35f03;
+}

@@ -1,0 +1,59 @@
+.container{
+  text-align: center;
+
+  padding: 2em;
+}
+img {
+  width: 80px;
+  border-radius: 50%;
+
+}
+h1{
+  font-size: 1em;
+  font-family:Poppins;
+  color: #eaeaea;
+  text-transform: capitalize;
+}
+h2{
+  font-size: .8em;
+  font-family:Poppins;
+  color: #e8e8e8;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+.user-caja{
+  display: flex;
+  gap: 1em;
+  text-align: center;
+  justify-content: center;
+  padding: 1em;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.caja{
+  margin-top: 1em;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+
+
+}
+button{
+  background: none;
+  border: none;
+  color: #eaeaea;
+  width: 100%;
+  cursor: pointer;
+  padding:1em;
+}
+.caja:hover{
+  background: #eaeaea;
+  transition-duration: .5s;
+
+}
+button:hover{
+  color: #172730;
+}

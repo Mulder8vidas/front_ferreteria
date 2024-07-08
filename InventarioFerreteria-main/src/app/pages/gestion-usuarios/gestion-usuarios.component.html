@@ -1,0 +1,98 @@
+<div class="main-container">
+  <div class="side">
+    <div class="user">
+      <app-ususario-datos></app-ususario-datos>
+    </div>
+    <div class="modulos">
+
+    </div>
+  </div>
+  <div class="menu">
+    <div class="barra-superior">
+      <img src="assets/nazcalogo.png" alt="">
+    </div>
+    <div class="main-menu">
+      <div class="titulo">
+        <i class="far fa-list-alt"></i>
+        <span> Gestión de Usuarios</span>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+          <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Dni</th>
+            <th>rol</th>
+            <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let datos of data">
+            <td ><img src="{{datos.imagenUrl}}" alt="" width="30px"></td>
+            <td>{{datos.nombre}}</td>
+            <td>{{datos.apellido}}</td>
+            <td>{{datos.email}}</td>
+            <td> {{datos.password}}</td>
+            {{datos.json}}
+            <td>{{datos.rol}}</td>
+
+            <td>
+              <p-toast></p-toast>
+              <div class="acciones">
+
+                <button (click)="showDialog(datos)"><i class="fas fa-edit edit"></i></button>
+                <button (click)="EliminarUsuario(datos.id)"><i class="far fa-trash-alt trash"></i></button>
+              </div>
+            </td>
+          </tr>
+          <p-dialog header="Editar Usuario" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+
+            <div class="form">
+              <form (ngSubmit)="actualizarUsuario()">
+
+                <div class="datos">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombre">
+                </div>
+                <div class="datos">
+                  <label for="apellido">Apellido:</label>
+                  <input type="text" id="apellido" name="apellido" [(ngModel)]="usuario.apellido">
+                </div>
+                <div class="datos">
+                  <label for="email">Marca:</label>
+                  <input type="text" id="email" name="email" [(ngModel)]="usuario.email">
+                </div>
+                <div class="datos">
+                  <label for="dni">DNI</label>
+                  <input type="text" id="dni" name="dni" [(ngModel)]="usuario.password">
+                </div>
+                <div class="datos">
+                  <label for="rol">Rol:</label>
+                  <select id="rol" name="rol" [(ngModel)]="usuario.rol">
+                    <option value="admin">Admin</option>
+                    <option value="jefe">Jefe de Área</option>
+                    <option value="empleado">Empleado</option>
+                  </select>
+                </div>
+
+                <div class="datos">
+                  <label for="imagenUrl">URL de la Imagen:</label>
+                  <input type="text" id="imagenUrl" name="imagenUrl" [(ngModel)]="usuario.imagenUrl">
+                </div>
+
+                <button class="btn">Guardar Usuario</button>
+              </form>
+            </div>
+          </p-dialog>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,34 @@
+<div class="main-container">
+  <div class="side">
+    <app-ususario-datos></app-ususario-datos>
+  </div>
+  <div class="menu">
+    <div class="barra-superior">
+      <img src="assets/nazcalogo.png" alt="">
+    </div>
+    <div class="main-menu">
+      <div class="titulo">
+        <i class="fas fa-laptop-house"></i>
+        <span> Gestión de Administrador</span>
+      </div>
+      <div class="container-menu">
+        <div class="txt-menu">
+          <h1 class="titulomenu" >¡Bienvenido <em>Nombre del usuario</em>! Este es el panel principal del sistema acá podrás encontrar atajos para acceder a cada módulo de gestion. </h1>
+          <div class="modulos-menu">
+
+            <button (click)="ListP()" class="modulo">
+              <span>Ver Productos</span>
+              <i class="far fa-list-alt icono"></i>
+            </button>
+            <button (click)="SalidaP()" class="modulo">
+              <span>Registrar Salida de productos</span>
+              <i class="fas fa-sign-out-alt icono"></i>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

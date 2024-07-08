@@ -1,0 +1,49 @@
+
+<div class="container">
+  <div class="user-caja">
+    <img src="{{datosLogin.url}}" alt="" width="200px">
+    <div class="data">
+      <h1>{{datosLogin.nombre}} {{datosLogin.apellido}}</h1>
+      <h2>{{datosLogin.rol}}</h2>
+    </div>
+  </div>
+
+  <div class="caja" *ngIf="datosLogin.rol == 'admin'">
+    <button routerLink="/nuevo-user">Registrar Nuevo Usuario</button>
+  </div>
+  <div class="caja" *ngIf="datosLogin.rol =='jefe'">
+    <button routerLink="/user-list">Gestionar Usuarios</button>
+  </div>
+  <div class="caja" *ngIf="datosLogin.rol =='admin'">
+    <button routerLink="/user-list">Gestionar Usuarios</button>
+  </div>
+  <div class="caja" *ngIf="datosLogin.rol =='jefe'">
+    <button routerLink="/nuevo-product">Registrar nuevo producto</button>
+  </div>
+  <div class="caja" *ngIf="datosLogin.rol =='admin'">
+    <button routerLink="/nuevo-product">Registrar nuevo producto</button>
+  </div>
+
+  <div class="caja" *ngIf="datosLogin.rol =='admin'">
+    <button routerLink="/product-list">Gestionar Productos</button>
+  </div>
+  <div class="caja" *ngIf="datosLogin.rol =='jefe'">
+    <button routerLink="/product-list">Gestionar Productos</button>
+  </div>
+  <div class="caja" *ngIf="datosLogin.rol =='empleado'">
+    <button routerLink="/product-list">Gestionar Productos</button>
+  </div>
+
+  <div class="caja" *ngIf="datosLogin.rol =='admin'">
+    <button routerLink="/salida-products">Registrar salida de producto</button>
+  </div>
+  <div class="caja" *ngIf="datosLogin.rol =='jefe'">
+    <button routerLink="/salida-products">Registrar salida de producto</button>
+  </div>
+  <div class="caja" *ngIf="datosLogin.rol =='empleado'">
+    <button routerLink="/salida-products">Registrar salida de producto</button>
+  </div>
+
+  <button class="caja" (click)="cerrarsesion()"> <i class="fas fa-sign-out-alt"></i>  Cerrar sesion </button>
+</div>
+

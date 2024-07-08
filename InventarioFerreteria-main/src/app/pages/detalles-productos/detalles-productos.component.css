@@ -1,0 +1,149 @@
+.main-container{
+  width: 98.9vw;
+  height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+}
+.side{
+  width: 20%;
+  background: #172730;
+  height: 100vh;
+}
+.menu{
+  padding: 1em;
+  width: 80%;
+  height: 100vh;
+  background: #f0f1f3;
+}
+.barra-superior{
+  width: 100%;
+  height: 50px;
+  border-bottom: solid 2px #172730;
+}
+.barra-superior img{
+  width: 140px;
+}
+.main-menu{
+  padding: 1em;
+  width: 98.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titulo{
+  font-size: 2em;
+  color: #555f67;
+  width: 90%;
+
+}
+.titulo span{
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+
+}
+.img-item img{
+  width: 80%;
+  margin-left: 10%;
+}
+.content{
+  display: flex;
+  padding: 2em;
+  margin: 1em;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+
+}
+.img-item,.details-item{
+  width: 50%;
+
+}
+
+
+.form{
+
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
+  width: 100%;
+  padding: 2em;
+}
+.datos  {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5em;
+}
+input,textarea{
+
+  margin-top: .5em;
+  outline: none;
+  padding: .8em 1em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
+  background: #fff;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.btn{
+  background: #f65903;
+  color: white;
+  padding: 1em 2em;
+  margin-top: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover{
+  transition-duration: .2s;
+  background: #b94d12;
+}
+textarea {
+  resize: none;
+  overflow-y: auto;
+  display: flex;
+
+}
+label{
+  font-family: 'Poppins', sans-serif;
+}
+.acciones{
+  width: 100%;
+  gap: 3em;
+
+
+}
+button{
+  border: none;
+  margin: 1em;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
+}
+.edit{
+  background: #ffca00;
+  padding: 1em 2em;
+
+}
+.trash{
+  background: #ff0015;
+  padding: 1em 2em;
+}
+h1 {
+
+  font-family: Poppins, serif;
+}
+h2,h3{
+  font-weight: 200;
+  font-family: Montserrat, serif;
+}
+.details-item{
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  padding: 4em;
+
+
+}
